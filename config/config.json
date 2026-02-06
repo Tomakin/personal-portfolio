@@ -1,0 +1,60 @@
+{
+  "site": {
+    "title": "Burak Tomakin",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.png",
+    "logo_white": "/images/logo-light.png",
+    "logo_width": "150",
+    "logo_height": "39",
+    "logo_text": "Burak"
+  },
+  "settings": {
+    "theme_switcher": true,
+    "default_theme": "system",
+    "pagination": 6,
+    "InnerPaginationOptions": {
+      "enableTop": false,
+      "enableBottom": true
+    },
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+  "params": {
+    "tag_manager_id": "",
+    "footer_content": "Full Stack .NET Developer building modern, clean, and efficient solutions.",
+    "copyright": "Designed and Developed By [Statichunt](https://statichunt.com/) | Distributed by [ThemeWagon](https://themewagon.com/)"
+  },
+  "metadata": {
+    "meta_author": "Burak Tomakin",
+    "meta_image": "/images/burak-profile1.jpeg",
+    "meta_description": "Burak Tomakin - Full Stack .NET Developer Portfolio"
+  },
+  "widgets": {
+    "about": {
+      "enable": true,
+      "content": "Senior level Full-Stack / Backend focused .NET developer with 6+ years of experience. I build modern architectures with a focus on clean code and production quality."
+    },
+    "featured_posts": {
+      "enable": true,
+      "title": "Blog Categories",
+      "showPost": 3
+    },
+    "categories": {
+      "enable": true,
+      "title": "Blog Categories"
+    },
+    "newsletter": {
+      "enable": false,
+      "title": "Newsletter",
+      "content": "Join thousands of Tiny Salt subscribers and get our best recipes delivered each week!",
+      "privacy_policy_page": "#",
+      "malichipm_url": ""
+    }
+  },
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  }
+}
