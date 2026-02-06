@@ -1,10 +1,10 @@
 {
-  "name": "geeky-nextjs",
+  "name": "burak-portfolio",
   "description": "a nextjs and tailwindcss boilerplate by themefisher.com",
   "version": "1.0.5",
   "private": true,
   "license": "UNLICENSED",
-  "homepage": "https://themewagon.github.io/geeky-nextjs",
+  "homepage": "https://buraktomakin.github.io/portfolio",
   "scripts": {
     "dev": "node lib/jsonGenerator.js && next dev",
     "build": "node lib/jsonGenerator.js && next build",

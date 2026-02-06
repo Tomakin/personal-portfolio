@@ -1,15 +1,15 @@
 
-const isProd = process.env.NODE_ENV === "production";
-
-const basePath = isProd ? "/geeky-nextjs" : "";
+// Kişisel portfolyo için basePath'i kaldır
+const basePath = "";
 
 const nextConfig = {
-  basePath,
-  assetPrefix: basePath,
+  basePath: basePath,
+  // assetPrefix'i undefined bırakalım ki Next.js otomatik ayarlasın
+  assetPrefix: undefined,
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
+  trailingSlash: true, // Önemli: Bu URL'lerin sonunda / olmasını sağlar
   eslint: {
     ignoreDuringBuilds: true,
   },

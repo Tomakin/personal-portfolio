@@ -1,31 +1,48 @@
-<h1 align=center>Geeky Nextjs</h1>
+# Burak Tomakin - Portfolio
 
+## Overview
 
-#### Preview
+Full Stack .NET Developer portfolio website built with Next.js and Tailwind CSS.
 
- - [Demo](https://themewagon.github.io/geeky-nextjs/)
+## Features
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/geeky-nextjs/)
- 
- 
-## Getting Started
+- Modern, responsive design
+- Blog system with Markdown support
+- Dark/light theme switching
+- Static site generation for fast loading
+- GitHub Pages deployment ready
 
-Clone from GitHub 
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/buraktomakin/portfolio.git
+cd portfolio
 ```
-https://github.com/themewagon/geeky-nextjs.git
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run development server:
+```bash
+npm run dev
+```
+
+4. Build for production:
+```bash
+npm run build
+npm run export
 ```
 
 ## Author
 
-Design and code are completely written by Statichunt's design and development team.  
-
+**Burak Tomakin** - Full Stack .NET Developer
 
 ## License
 
- - Design and Code is Copyright &copy; [Statichunt](https://statichunt.com/)
- - Licensed under [MIT]
- - Distributed by [ThemeWagon](https://themewagon.com)
+Based on a template licensed under MIT
 
 
 
