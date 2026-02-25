@@ -1,13 +1,10 @@
-# Decap CMS production config (self-hosted OAuth proxy on your homeserver)
-# Replace the placeholder domain below before deploying.
 backend:
   name: github
   repo: Tomakin/personal-portfolio
   branch: main
-  base_url: https://buraktomakin.com.tr/cms-auth
-  auth_endpoint: auth
+  base_url: https://buraktomakin.com.tr
+  auth_endpoint: cms-auth/auth
 
-# Local development (Decap local proxy). Safe to keep enabled.
 local_backend: true
 
 site_url: https://buraktomakin.com.tr
