@@ -11,24 +11,39 @@ const Contact = ({ data }) => {
   return (
     <section className="section lg:mt-16">
       <div className="container">
-        <div className="row relative pb-16">
-          <div className="lg:col-6">
-            {markdownify(
-              title,
-              "h1",
-              "h1 my-10 lg:my-11 lg:pt-11 text-center lg:text-left lg:text-[64px]"
-            )}
+        <div className="row relative pb-16 items-stretch">
+          {/* Hugging Face Chatbot - Left Side */}
+          <div className="lg:col-6 mb-8 lg:mb-0 lg:pr-8">
+            <div className="h-[500px] lg:h-[600px]" style={{ overflow: "hidden", border: "1px solid #ccc", height: "100%" }}>
+              <h2>
+                Chat with
+                <span className="ml-1.5 inline-flex items-center text-primary">
+                  Me
+                  <BsArrowRightShort />
+                </span>
+              </h2>
+              <iframe
+                src="https://tomakinn-chatbot-me.hf.space"
+                width="100%"
+                height="100%"
+                className="w-full h-full rounded border border-border overflow-hidden"
+                title="Chatbot"
+                style={{ paddingTop: "0px" }}
+              ></iframe>
+            </div>
           </div>
-          <div className="contact-form-wrapper rounded border border-border p-6 dark:border-darkmode-border lg:col-6">
+
+          {/* Contact Form - Right Side */}
+          <div className="contact-form-wrapper rounded border border-border p-6 lg:col-6 lg:pl-8 flex flex-col">
             <h2>
-              Send Us A
+              Send Me A
               <span className="ml-1.5 inline-flex items-center text-primary">
                 Message
                 <BsArrowRightShort />
               </span>
             </h2>
             <form
-              className="contact-form mt-12"
+              className="contact-form mt-12 flex-grow"
               method="POST"
               action={form_action}
             >
@@ -87,8 +102,8 @@ const Contact = ({ data }) => {
                 <textarea
                   className="form-textarea w-full"
                   name="message"
-                  placeholder="Hello I’m Mr ‘x’ from………….."
-                  rows="7"
+                  placeholder="Hello I'm Mr 'x' from………….."
+                  rows="5"
                   required
                 />
               </div>
@@ -101,45 +116,23 @@ const Contact = ({ data }) => {
           </div>
         </div>
         <div className="row">
-          {phone && (
-            <div className="md:col-6 lg:col-4">
-              <Link
-                href={`tel:${phone}`}
-                className="my-4 flex h-[100px] items-center justify-center
-             rounded border border-border p-4 text-primary dark:border-darkmode-border"
-              >
-                <FaUserAlt />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
-                  {phone}
-                </p>
-              </Link>
-            </div>
-          )}
+
+          <div className="md:col-6 lg:col-4">
+
+          </div>
+
           {mail && (
             <div className="md:col-6 lg:col-4">
               <Link
                 href={`mailto:${mail}`}
                 className="my-4 flex h-[100px] items-center justify-center
-             rounded border border-border p-4 text-primary dark:border-darkmode-border"
+             rounded border border-border p-4 text-primary"
               >
                 <FaEnvelope />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
+                <p className="ml-1.5 text-lg font-bold text-dark">
                   {mail}
                 </p>
               </Link>
-            </div>
-          )}
-          {location && (
-            <div className="md:col-6 lg:col-4">
-              <span
-                className="my-4 flex h-[100px] items-center justify-center
-             rounded border border-border p-4 text-primary dark:border-darkmode-border"
-              >
-                <FaMapMarkerAlt />
-                <p className="ml-1.5 text-lg font-bold text-dark dark:text-darkmode-light">
-                  {location}
-                </p>
-              </span>
             </div>
           )}
         </div>

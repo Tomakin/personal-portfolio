@@ -1,0 +1,16 @@
+[Unit]
+Description=GitHub Webhook Deploy Receiver
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory="/home/tomakin/Desktop/Portfolio Website/app/ops/github-webhook-deploy"
+EnvironmentFile="/home/tomakin/Desktop/Portfolio Website/app/ops/github-webhook-deploy/.env"
+ExecStart=/usr/bin/node "/home/tomakin/Desktop/Portfolio Website/app/ops/github-webhook-deploy/server.mjs"
+Restart=always
+RestartSec=2
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

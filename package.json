@@ -9,6 +9,8 @@
     "dev": "node lib/jsonGenerator.js && next dev",
     "build": "node lib/jsonGenerator.js && next build",
     "export": "npm run build && next export",
+    "cms:proxy": "npx decap-server",
+    "cms:local": "npm run cms:proxy",
     "lint": "next lint",
     "start": "next start"
   },

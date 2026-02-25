@@ -32,6 +32,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+ops/**/.env
 
 # vercel
 .vercel
@@ -92,3 +93,15 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+# local editor / agent config
+.claude/
+.cursor/
+.vscode/
+
+# caches and temp files
+.eslintcache
+*.swp
+*.swo
+*~
+*.orig

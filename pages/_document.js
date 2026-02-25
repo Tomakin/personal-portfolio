@@ -13,16 +13,7 @@ const Document = () => {
         {/* theme meta */}
         <meta name="theme-name" content="burak-portfolio" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="#fff"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="#000"
-        />
+        <meta name="theme-color" content="#fff" />
       </Head>
       <body>
         <Main />

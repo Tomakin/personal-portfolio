@@ -3,7 +3,7 @@ body.menu-open {
 }
 
 .header {
-  @apply top-0 z-50 border-b bg-body py-[33px] dark:border-darkmode-border dark:bg-darkmode-body;
+  @apply top-0 z-50 border-b bg-body py-[33px];
 }
 
 // navbar items
@@ -12,7 +12,7 @@ body.menu-open {
 }
 
 .collapse-menu {
-  @apply fixed right-0 top-0 z-10 mx-0 h-[100vh] w-full max-w-[400px] items-center border-l border-l-dark  bg-body p-6 transition-transform duration-300 ease-in-out dark:bg-darkmode-body lg:static lg:flex lg:h-auto lg:w-auto lg:max-w-full lg:space-x-4 lg:border-l-0 lg:bg-transparent lg:p-0 xl:space-x-8;
+  @apply fixed right-0 top-0 z-10 mx-0 h-[100vh] w-full max-w-[400px] items-center border-l border-l-dark bg-body p-6 transition-transform duration-300 ease-in-out lg:static lg:flex lg:h-auto lg:w-auto lg:max-w-full lg:space-x-4 lg:border-l-0 lg:bg-transparent lg:p-0 xl:space-x-8;
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@ body.menu-open {
 }
 
 .nav-link {
-  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize  text-dark transition hover:bg-primary hover:text-white dark:text-darkmode-light md:px-3 md:py-3 lg:text-center xl:px-5;
+  @apply rounded-[30px] px-6 py-2.5 text-left font-secondary text-[13.5px] capitalize text-dark transition hover:bg-primary hover:text-white md:px-3 md:py-3 lg:text-center xl:px-5;
 
   &.active {
     @apply bg-primary text-white;
@@ -47,7 +47,7 @@ body.menu-open {
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg  border border-transparent bg-body p-4 shadow dark:border-darkmode-border dark:bg-black;
+  @apply z-10 rounded-lg border border-transparent bg-body p-4 shadow;
 }
 
 .nav-dropdown-item {
@@ -55,7 +55,7 @@ body.menu-open {
 }
 
 .nav-dropdown-link {
-  @apply min-w-[150px] rounded py-2.5 px-3.5 text-base font-semibold  text-dark transition hover:bg-primary/10 hover:text-primary dark:text-darkmode-light;
+  @apply min-w-[150px] rounded py-2.5 px-3.5 text-base font-semibold text-dark transition hover:bg-primary/10 hover:text-primary;
 
   &.active {
     @apply bg-primary/10 text-primary;
@@ -67,7 +67,7 @@ body.menu-open {
   @apply inline-block h-10 w-10 cursor-pointer rounded-full bg-primary p-2.5 text-xl text-white;
 }
 .search-modal {
-  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body opacity-0 transition dark:bg-black md:h-full;
+  @apply invisible absolute top-0 left-0 right-0 z-10 h-10 bg-body opacity-0 transition md:h-full;
   .form-input {
     @apply h-full w-full border-0 px-4 text-lg;
   }
@@ -79,9 +79,3 @@ body.menu-open {
   }
 }
 
-.light .menu-open {
-  .border-border,
-  &.border-border {
-    @apply border-darkmode-border;
-  }
-}

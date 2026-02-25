@@ -1,14 +1,18 @@
-# Production backend (uncomment when deploying)
-# backend:
-#   name: github
-#   repo: tomakin/personal-portfolio
-#   branch: main
-#   base_url: https://decap-oauth.netlify.app
-
-# Local development - writes directly to file system
-local_backend: true
+# Decap CMS production config (self-hosted OAuth proxy on your homeserver)
+# Replace the placeholder domain below before deploying.
 backend:
-  name: git-gateway
+  name: github
+  repo: Tomakin/personal-portfolio
+  branch: main
+  base_url: https://buraktomakin.com.tr/cms-auth
+  auth_endpoint: auth
+
+# Local development (Decap local proxy). Safe to keep enabled.
+local_backend: true
+
+site_url: https://buraktomakin.com.tr
+display_url: https://buraktomakin.com.tr
+publish_mode: simple
 
 media_folder: public/images/post
 public_folder: /images/post
@@ -28,4 +32,6 @@ collections:
       - { label: "Categories", name: "categories", widget: "list", default: ["programming"] }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }
+      - { label: "Author", name: "author", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }

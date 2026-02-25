@@ -1,15 +1,12 @@
 import config from "@config/config.json";
 import theme from "@config/theme.json";
 import { JsonContext } from "context/state";
-import { ThemeProvider } from "next-themes";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
 
 const App = ({ Component, pageProps }) => {
-  // default theme setup
-  const { default_theme } = config.settings;
 
   // import google font css
   const pf = theme.fonts.font_family.primary;
@@ -56,9 +53,7 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
-      <ThemeProvider attribute="class" defaultTheme={default_theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Component {...pageProps} />
     </JsonContext>
   );
 };

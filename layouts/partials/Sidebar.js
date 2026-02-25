@@ -25,7 +25,7 @@ const Sidebar = ({ posts, categories, className }) => {
   return (
     <aside className={`${className} px-0 lg:px-6 lg:col-4`}>
       {about.enable && (
-        <div className="relative rounded border border-border p-6 text-center dark:border-darkmode-border">
+        <div className="relative rounded border border-border p-6 text-center border-border">
           <ImageFallback
             className="-z-[1]"
             src="/images/map.svg"
@@ -43,16 +43,16 @@ const Sidebar = ({ posts, categories, className }) => {
 
       {/* categories widget */}
       {categories.enable && (
-        <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
+        <div className="mt-6 rounded border border-border p-6 border-border">
           <h4 className="section-title mb-12 text-center">
             {featured_posts.title}
           </h4>
           <ul>
             {categories.map((category, i) => (
               <li
-                className={`relative mb-2 flex items-center justify-between pl-6 text-[16px] font-bold capitalize text-dark dark:text-darkmode-light ${
+                className={`relative mb-2 flex items-center justify-between pl-6 text-[16px] font-bold capitalize text-dark  ${
                   i !== categories.length - 1 &&
-                  "border-b border-border  dark:border-darkmode-border"
+                  "border-b border-border  border-border"
                 }`}
                 key={i}
               >
@@ -87,7 +87,7 @@ const Sidebar = ({ posts, categories, className }) => {
 
       {/* featured widget */}
       {featured_posts.enable && (
-        <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
+        <div className="mt-6 rounded border border-border p-6 border-border">
           <h4 className="section-title mb-12 text-center">Featured</h4>
           <div className="mb-12 flex items-center justify-center">
             <button
@@ -114,7 +114,7 @@ const Sidebar = ({ posts, categories, className }) => {
                   <div
                     className={`flex items-center ${
                       i !== arr.length - 1 &&
-                      "mb-6 border-b border-border pb-6 dark:border-darkmode-border"
+                      "mb-6 border-b border-border pb-6 border-border"
                     }`}
                     key={`key-${i}`}
                   >
@@ -183,7 +183,7 @@ const Sidebar = ({ posts, categories, className }) => {
 
       {/* newsletter */}
       {newsletter.enable && (
-        <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
+        <div className="mt-6  rounded border border-border p-6 text-center border-border">
           <h4 className="section-title">{newsletter.title}</h4>
           <p className="mt-10 text-xs">{newsletter.content}</p>
           <MailchimpSubscribe

@@ -29,12 +29,12 @@ const About = ({ data }) => {
 
         <div className="row mt-24 text-left lg:flex-nowrap">
           <div className="experience mt-10 lg:mt-0 lg:col-6">
-            <div className="rounded border border-border p-6 dark:border-darkmode-border ">
+            <div className="rounded border border-border p-6 border-border ">
               {markdownify(experience.title, "h2", "section-title mb-12")}
               <ul className="row">
                 {experience?.list?.map((item, index) => (
                   <li
-                    className="mb-5 text-lg font-bold text-dark dark:text-darkmode-light lg:col-6"
+                    className="mb-5 text-lg font-bold text-dark  lg:col-6"
                     key={"experience-" + index}
                   >
                     {item}

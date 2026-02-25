@@ -10,8 +10,8 @@
     "logo_text": "Burak"
   },
   "settings": {
-    "theme_switcher": true,
-    "default_theme": "system",
+    "theme_switcher": false,
+    "default_theme": "light",
     "pagination": 6,
     "InnerPaginationOptions": {
       "enableTop": false,

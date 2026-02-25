@@ -35,7 +35,7 @@ const Footer = () => {
                 onClick={(e) => {
                   e.preventDefault();
                 }}
-                className="p-2 font-bold text-dark hover:text-primary dark:text-darkmode-light lg:p-4"
+                className="p-2 font-bold text-dark hover:text-primary  lg:p-4"
               >
                 {menu.name}
               </Link>

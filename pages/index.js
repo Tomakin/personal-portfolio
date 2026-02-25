@@ -50,26 +50,26 @@ const Home = ({
               </div>
               {markdownify(banner.content, "p", "mt-4")}
               {banner.button.enable && (
-                  <Link
-                    className="btn btn-primary mt-6"
-                    href={banner.button.link}
-                    rel={banner.button.rel}
-                  >
-                    {banner.button.label}
-                  </Link>
+                <Link
+                  className="btn btn-primary mt-6"
+                  href={banner.button.link}
+                  rel={banner.button.rel}
+                >
+                  {banner.button.label}
+                </Link>
               )}
             </div>
             {banner.image_enable && (
-                <div className="col-9 lg:col-6">
-                  <ImageFallback
-                    className="mx-auto object-contain"
-                    src={banner.image}
-                    width={548}
-                    height={443}
-                    priority={true}
-                    alt="Banner Image"
-                  />
-                </div>
+              <div className="col-9 lg:col-6">
+                <ImageFallback
+                  className="mx-auto object-contain"
+                  src={banner.image}
+                  width={548}
+                  height={443}
+                  priority={true}
+                  alt="Banner Image"
+                />
+              </div>
             )}
           </div>
         </div>
@@ -84,20 +84,19 @@ const Home = ({
               {featured_posts.enable && (
                 <div className="section">
                   {markdownify(featured_posts.title, "h2", "section-title")}
-                  <div className="rounded border border-border p-6 dark:border-darkmode-border">
+                  <div className="rounded border border-border p-6 border-border">
                     <div className="row">
                       <div className="md:col-6">
                         <Post post={featuredPosts[0]} />
                       </div>
-                      <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border dark:scrollbar-track-gray-800 dark:scrollbar-thumb-darkmode-theme-dark md:mt-0 md:col-6">
+                      <div className="scrollbar-w-[10px] mt-8 max-h-[480px] scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-border  md:mt-0 md:col-6">
                         {featuredPosts
                           .slice(1, featuredPosts.length)
                           .map((post, i, arr) => (
                             <div
-                              className={`mb-6 flex items-center pb-6 ${
-                                i !== arr.length - 1 &&
-                                "border-b border-border dark:border-darkmode-border"
-                              }`}
+                              className={`mb-6 flex items-center pb-6 ${i !== arr.length - 1 &&
+                                "border-b border-border border-border"
+                                }`}
                               key={`key-${i}`}
                             >
                               {post.frontmatter.image && (
@@ -131,24 +130,11 @@ const Home = ({
                 </div>
               )}
 
-              {/* Promotion */}
-              {promotion.enable && (
-                <Link href={promotion.link} className="section block pt-0">
-                  <ImageFallback
-                    className="h-full w-full"
-                    height="115"
-                    width="800"
-                    src={promotion.image}
-                    alt="promotion"
-                  />
-                </Link>
-              )}
-
               {/* Recent Posts */}
               {recent_posts.enable && (
                 <div className="section pt-0">
                   {markdownify(recent_posts.title, "h2", "section-title")}
-                  <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
+                  <div className="rounded border border-border px-6 pt-6 border-border">
                     <div className="row">
                       {sortPostByDate.slice(0, showPosts).map((post) => (
                         <div className="mb-8 md:col-6" key={post.slug}>
